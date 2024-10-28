@@ -1,0 +1,57 @@
+:root {
+    --powder: #ffeaba;
+    --paradise: #ef476f;
+    --crayola: #ffd166;
+    --green: #06d6a0;
+    --obsidian: #482c3d;
+
+}
+
+body {
+    background: var(--obsidian);
+}
+
+.grid {
+    background: var(--powder);
+    display: grid;
+    grid-template: auto 1fr auto;
+}
+
+
+header {
+    background: var(--green);
+    margin: 5px;
+}
+
+.nav-container {
+    background: var(--powder);
+    display: flex;
+    padding: 1rem;
+    justify-content:space-around;
+    margin: 5px;
+}
+
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+
+
+.main {
+    background: var(--green);
+    margin: 5px;
+    flex: 1 1 50%;
+}
+
+.aside{
+    background: var(--paradise);
+    margin: 5px;
+    flex: 1 1 450px;
+}
+
+footer{
+    background: var(--crayola);
+    margin: 5px;
+    padding: 25px;
+}
