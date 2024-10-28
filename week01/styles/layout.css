@@ -4,7 +4,6 @@
     --crayola: #ffd166;
     --green: #06d6a0;
     --obsidian: #482c3d;
-
 }
 
 body {
@@ -14,9 +13,8 @@ body {
 .grid {
     background: var(--powder);
     display: grid;
-    grid-template: auto 1fr auto;
+    grid-template-rows: auto 1fr auto;
 }
-
 
 header {
     background: var(--green);
@@ -36,7 +34,6 @@ header {
     flex-wrap: wrap;
     justify-content:space-around;
 }
-
 
 .main {
     background: var(--green);
