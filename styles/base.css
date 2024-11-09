@@ -73,7 +73,6 @@ main {
     border: 1px solid #004040;
     display: grid;
     max-width: 1040px;
-    /* grid-template-columns: repeat (2, 1fr); */
 }
 
 .card {
@@ -163,7 +162,6 @@ footer p {
     }
 
     .card ul {
-        /* padding-top: 50%; */
         position:absolute;
         top: 35%;
     }
