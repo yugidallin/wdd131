@@ -29,7 +29,7 @@ p {
 
 header {
     margin: 0 auto;
-    background-color: var(--accent2-color);
+    background-color: var(--secondary-color);
 }
 
 header h1 {
@@ -87,6 +87,7 @@ main {
 .card h2 {
     margin: 0;
     padding: 1rem;
+    border-radius: 7.5px 7.5px 0 0;
     color: var(--nav-link-color);
     background-color: var(--secondary-color);
 }
@@ -99,6 +100,10 @@ main {
 
 .card ul{
     margin: 1rem 1rem;
+}
+
+.card li {
+    padding: 1rem;
 }
 
 .card h3 {
@@ -160,6 +165,6 @@ footer p {
     .card ul {
         /* padding-top: 50%; */
         position:absolute;
-        top: 40%;
+        top: 35%;
     }
 }
