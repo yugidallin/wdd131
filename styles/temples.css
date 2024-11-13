@@ -84,7 +84,7 @@ figure {
 }
 
 /* Larger Resolution */
-@media (min-width: 640px){
+/* @media (min-width: 640px){
     
     header, main, footer {
         margin: 0 auto;
@@ -104,5 +104,5 @@ figure {
     }
 
     
-}
+} */
       
