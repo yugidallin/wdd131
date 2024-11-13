@@ -1,0 +1,24 @@
+/* CSS */
+.hamburger {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.menu {
+    display: none; /* Initially hidden */
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.menu.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.menu a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+}
