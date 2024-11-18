@@ -29,6 +29,7 @@ header, main, footer {
 
 #menu::before {
 	content: "☰";
+    background-color:#71627a;
 }
 
 #menu.open::before {
@@ -83,26 +84,4 @@ figure {
     margin: 1rem;
 }
 
-/* Larger Resolution */
-/* @media (min-width: 640px){
-    
-    header, main, footer {
-        margin: 0 auto;
-        max-width: 1040px;
-        text-align: center;
-    }
-    #menu {
-        display: none;
-    }
-    .navi {
-        flex-direction: row;
-    }
-
-    .navi a {
-        display: block;
-        flex: 1 1 100%;
-    }
-
-    
-} */
       
