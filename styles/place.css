@@ -4,9 +4,9 @@
 }
 
 :root {
-    --main-color: rgb(255, 255, 255);
-    --heading-color: rgb(81, 81, 246);
-    --accent-color: rgb(255,127,127);
+    --accent-color: rgb(202, 124, 8);
+    --heading-color: rgb(255, 255, 255);
+    --main-color: rgb(25, 51, 163);
 }
 
 body {
@@ -33,15 +33,19 @@ header, main, footer {
 }
 
 header {
-    padding: 1px;
+    padding-top: 1px;
     background-color:var(--main-color);
-    border-bottom:8px solid  var(--accent-color);
+    border-bottom:10px solid  var(--accent-color);
 }
 
 h1, h2, p{
     color: var(--heading-color);
     font-weight: bold;
     line-height: 1.5;
+}
+
+h1 {
+    font-size: 40px;
 }
 
 
@@ -79,9 +83,9 @@ h1, h2, p{
 
 footer {
     background-color:var(--main-color);
-    padding: 1px;
+    padding-bottom: 1px;
     color: rgb(255, 255, 255);
-    border-top:8px solid var(--accent-color);
+    border-top:10px solid var(--accent-color);
     
 }
 
@@ -102,8 +106,8 @@ footer {
         padding-top: .5rem;
         padding-bottom: .5rem;
         padding-left: .8rem;
-        color: black;
-        background-color: rgb(255, 255, 127);
+        /* color: black; */
+        background-color: rgb(143, 34, 34);
         text-align: left;
         left: -10px;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
