@@ -1,0 +1,142 @@
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: rgb(255, 255, 255);
+    --heading-color: rgb(81, 81, 246);
+    --accent-color: rgb(255,127,127);
+}
+
+body {
+    font-family: "Roboto",sans-serif;
+    background-color: rgb(220, 216, 216);
+}
+
+header, main, footer {
+    min-width: 498px;
+    max-width: 1080px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero {
+    display: grid;
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+header {
+    padding: 1px;
+    background-color:var(--main-color);
+    border-bottom:8px solid  var(--accent-color);
+}
+
+h1, h2, p{
+    color: var(--heading-color);
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+
+.data, .weather{
+    width: 400px;
+    margin: 0 auto;
+    position: static;
+    padding-bottom: 1rem;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 200px 200px;
+}
+
+.col {
+    text-align: right;
+    padding-right: .5rem;
+}
+
+.col:last-child {
+    text-align: left;
+    padding-left: .5rem;
+}
+
+.weather img {
+    width: 150px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.weather .row {
+    grid-template-columns: 200px 200px;
+}
+
+footer {
+    background-color:var(--main-color);
+    padding: 1px;
+    color: rgb(255, 255, 255);
+    border-top:8px solid var(--accent-color);
+    
+}
+
+@media (min-width: 1080px) {
+
+    .data, .weather {
+        width: 300px;
+        padding-bottom: 1rem;
+        position: absolute;
+        z-index: 1;
+        background-color: rgba(240, 248, 255, 0.7);
+        text-align: center;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+        position: relative;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        padding-left: .8rem;
+        color: black;
+        background-color: rgb(255, 255, 127);
+        text-align: left;
+        left: -10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .data {
+        left: 47rem;
+        top: 1.5rem;
+    }
+    
+    .weather{
+        top: 30rem;
+        left: 1.5rem;
+        height: 200px;
+        padding-bottom: 0;
+    }
+    
+    .weather img {
+        position: relative;
+        height: 90px;
+        width: 90px;
+        top: -95px;
+        left: 70px;
+        padding-bottom: 0;
+    }
+
+    .data .row, .weather .row {
+        grid-template-columns: 150px 150px;
+    }
+
+    .weather .row {
+        position: relative;
+        top: -90px;
+    }
+
+}
