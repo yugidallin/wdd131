@@ -14,8 +14,6 @@ hamBtn.addEventListener('click', () => {
     hamBtn.classList.toggle('open');
 })
 
-
-// Select navigation links and temple container
 const navLinks = document.querySelectorAll('.navi a');
 const templeContainer = document.querySelector('#templeContainer');
 
@@ -100,11 +98,10 @@ const temples = [
       imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     }
-    // Add more temple objects here...
   ];
 
   function displayTemples(templesArray) {
-    templeContainer.innerHTML = ''; // Clear current display
+    templeContainer.innerHTML = '';
 
     templesArray.forEach((temple) => {
         const card = document.createElement("div");
@@ -137,13 +134,10 @@ const temples = [
     });
 }
 
-// Get year from dedication date
 function getDedicationYear(dedicationDate) {
     return parseInt(dedicationDate.split(', ')[0], 10);
 }
 
-
-// Filters
 const filters = {
     'Home': () => temples,
     'Old': () => temples.filter(temple => getDedicationYear(temple.dedicated) < 2000),
@@ -152,16 +146,13 @@ const filters = {
     'Small': () => temples.filter(temple => temple.area < 30000)
 };
 
-// Add click event listeners to navigation links
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
 
-        // Update active class
         navLinks.forEach(link => link.classList.remove('active'));
         e.target.classList.add('active');
 
-        // Apply filter
         const filterType = e.target.textContent.trim();
         console.log(`Filter Type: ${filterType}`);
         const filteredTemples = filters[filterType]();
@@ -169,10 +160,8 @@ navLinks.forEach(link => {
 
         displayTemples(filteredTemples);
 
-        // Update heading
         document.querySelector('main h2').textContent = filterType;
     });
 });
 
-// Initial display
 displayTemples(temples);
