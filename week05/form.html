@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review From</title>
+    <meta name="description" content="Week 5 Assignment: Product Review Form">
+    <meta name="author" content="Dallin Cabaliza">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header><h1>Product Review</h1></header>
+    <main>
+    <form method="get" action="review.html">
+        <label for="productName">Product Name:</label>
+        <select id="productName" name="productName" required>
+            <option value="" disabled selected>Choose a Product ...</option>
+        </select>
+
+        <fieldset class="rating">
+            <legend>Overall Rating:</legend>
+            <div>
+                <input type="radio" id="star1" name="rating" value="1" required>
+                <label for="star1">☆</label>
+            </div>
+            <div>
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2">☆☆</label>
+            </div>
+            <div>
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3">☆☆☆</label>
+            </div>
+            <div>
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4">☆☆☆☆</label>
+            </div>
+            <div>
+                <input type="radio" id="star5" name="rating" value="5">
+                <label for="star5">☆☆☆☆☆</label>
+            </div>
+        </fieldset>
+
+        <label for="installDate">Date of Installation:</label>
+        <input type="date" id="installDate" name="installDate" required>
+
+        <fieldset>
+            <legend>Which features did you find useful in the product?</legend>
+            <div>
+                <input type="checkbox" id="durability" name="features" value="Durability">
+                <label for="durability">Durability</label>
+            </div>
+            <div>
+                <input type="checkbox" id="ease" name="features" value="Ease of Use">
+                <label for="ease">Ease of Use</label>
+            </div>
+            <div>
+                <input type="checkbox" id="performance" name="features" value="Performance">
+                <label for="performance">Performance</label>
+            </div>
+            <div>
+                <input type="checkbox" id="design" name="features" value="Design">
+                <label for="design">Design</label>
+            </div>
+        </fieldset>
+
+        <label for="review">Written Review <span class="optional">(Optional)</span>:</label>
+        <textarea id="review" name="review" rows="5" cols="30" placeholder="Write your review here..."></textarea>
+
+        <label for="userName">Your Name <span class="optional">(Optional)</span>:</label>
+        <input type="text" id="userName" name="userName" placeholder="Enter your name">
+
+        <input type="submit" value="Post Review">
+    </form>
+    </main>
+    <footer>
+        <p><span id="currentYear"></span> Dallin Cabaliza | Philippines</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

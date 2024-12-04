@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2e293a;
+    --accent-color: #a59cb3;
+    --nav-background-color: #5b4965;
+    --nav-link-color: #fff;
+    --nav-hover-background-color: #cdbed5;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    min-width: 480px;
+}
+
+header, main, footer {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 480px;
+}
+
+header, footer {
+    background-color: var(--primary-color);
+    color: var(--nav-link-color);
+}
+
+header {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+
+main {
+    border:1px solid var(--primary-color);
+}
+
+footer {
+    padding: 1rem;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+form {
+    margin: 0 auto;
+    background-color: var(--accent-color);
+    padding: 2rem;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+form h1 {
+    background-color: var(--primary-color);
+    color: #FFF;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    margin: -2rem -2rem 1.5rem; 
+}
+
+label, legend {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 1rem;
+}
+
+fieldset div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+label.optional {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+input[type="submit"] {
+    background-color: var(--nav-background-color);
+    color: var(--nav-link-color);
+    padding: 0.75rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+input[type="submit"]:hover {
+    background-color: var(--nav-hover-background-color);
+}
+
+.rating {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem; 
+    align-items: center; 
+}
+
+.rating div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 18%;
+}
+
+.rating input[type="radio"] {
+    margin-top: 0.5rem; 
+}
+
+.rating label {
+    font-size: 1rem; 
+    margin-bottom: 0.2rem; 
+}
+
+.review {
+    margin: 3rem;
+}
