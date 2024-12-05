@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Title</title>
+    <meta name="description" content="description of page using keywords">
+    <meta name="author" content="Dallin Cabaliza">
+    <link rel="stylesheet" href="styles/travel.css">
+    <script src="scripts/travel.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Travel-PH.com</h1>
+        <nav>
+            <ul class="nav-links">
+              <li><a href="siteplan.html">Home</a></li>
+              <li><a href="destinations.html">Destinations</a></li>
+              <li><a href="planner.html">Itinerary Planner</a></li>
+            </ul>
+          </nav>
+    </header>
+    <main>
+        <section id="destinations">
+            <h2>Explore Destinations</h2>
+            <button data-category="all">All</button>
+            <button data-category="beach">Beaches</button>
+            <button data-category="city">Cities</button>
+            <div class="destination-container">
+              <div class="destination" data-category="beach">
+                <img src="beach.jpg" alt="Beach">
+                <p>Sunny Beach</p>
+              </div>
+              <div class="destination" data-category="city">
+                <img src="city.jpg" alt="City">
+                <p>Urban Getaway</p>
+              </div>
+              <!-- More destinations -->
+            </div>
+          </section>
+    </main>
+    <footer>&copy Dallin Cabaliza | WDD131 - Fall Second Block 2024</footer>
+</body>
+</html>

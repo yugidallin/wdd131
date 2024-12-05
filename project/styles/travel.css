@@ -1,0 +1,61 @@
+
+
+:root {
+    --main-color: #1A5D7E;
+    --secondary-color: #A3733F;
+    --accent-color: #ECD67F;
+}
+
+body{
+    font-family: "Roboto", serif;   
+}
+
+header {
+    background-color: #1A5D7E;
+    padding: 1rem;
+  }
+h1 {
+    color: white;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    justify-content: right;
+    gap: 1rem;
+}
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.nav-links a:hover {
+    color: #94d2bd;
+}
+main, footer, header {
+    margin: 0 auto;
+}
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.roboto-thin {
+    font-family: "Roboto", serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .roboto-regular {
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .roboto-black {
+    font-family: "Roboto", serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
