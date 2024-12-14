@@ -7,38 +7,295 @@
     <meta name="description" content="description of page using keywords">
     <meta name="author" content="Dallin Cabaliza">
     <link rel="stylesheet" href="styles/travel.css">
-    <script src="scripts/travel.js"></script>
+    <link rel="stylesheet" href="styles/destinations.css">
+    <script src="scripts/travel.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Travel-PH.com</h1>
-        <nav>
-            <ul class="nav-links">
-              <li><a href="siteplan.html">Home</a></li>
-              <li><a href="destinations.html">Destinations</a></li>
-              <li><a href="planner.html">Itinerary Planner</a></li>
-            </ul>
-          </nav>
-    </header>
-    <main>
-        <section id="destinations">
-            <h2>Explore Destinations</h2>
-            <button data-category="all">All</button>
-            <button data-category="beach">Beaches</button>
-            <button data-category="city">Cities</button>
-            <div class="destination-container">
-              <div class="destination" data-category="beach">
-                <img src="beach.jpg" alt="Beach">
-                <p>Sunny Beach</p>
-              </div>
-              <div class="destination" data-category="city">
-                <img src="city.jpg" alt="City">
-                <p>Urban Getaway</p>
-              </div>
-              <!-- More destinations -->
+  <header>
+    <button id="menu" aria-label="Toggle navigation menu"></button>
+    <div class="logo">
+        <a href="index.html">
+            <h1>Travel-PH.com</h1>
+        </a>
+    </div>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="destinations.html" class="active">Destinations</a>
+        <a href="planner.html">Itinerary Planner</a>
+    </nav>
+</header>
+  <main>
+    <section id="destinations">
+      <h2>Explore Destinations</h2>
+      <div class="filter-buttons" role="group" aria-label="Destination filters">
+        <button data-category="all" aria-pressed="true">All</button>
+        <button data-category="beach" aria-pressed="false">Beaches</button>
+        <button data-category="city" aria-pressed="false">Cities</button>
+        <button data-category="others" aria-pressed="false">Others</button>
+      </div>
+      <div class="destination-container">
+        <div class="destination" data-category="beach">
+          <div class="destination-card">
+            <img src="images/destinations/beaches/boracay/boracay5-small.webp" alt="Boracay-small" loading="lazy">
+          </div>
+          <div class="slideshow-container" tabindex="0">
+            <div class="slides">
+              <img src="images/destinations/beaches/boracay/boracay1.webp" alt="Boracay" loading="lazy">
+              <img src="images/destinations/beaches/boracay/boracay2.webp" alt="Boracay" loading="lazy">
+              <img src="images/destinations/beaches/boracay/boracay3.webp" alt="Boracay" loading="lazy">
+              <img src="images/destinations/beaches/boracay/boracay4.webp" alt="Boracay" loading="lazy">
+              <img src="images/destinations/beaches/boracay/boracay5.webp" alt="Boracay" loading="lazy">
             </div>
-          </section>
-    </main>
-    <footer>&copy Dallin Cabaliza | WDD131 - Fall Second Block 2024</footer>
+              <button class="prev" aria-label="Previous slide" onclick="changeSlide(-1)">&#10094;</button>
+              <button class="next" aria-label="Next slide" onclick="changeSlide(1)">&#10095;</button>
+              <div class="dot-container">
+                <span class="dot" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+                <span class="dot" data-index="4"></span>
+              </div>
+          </div>
+          <div class="description">
+            <h3>Boracay</h3>
+            <p>Located in the central Visayas region, about an hour’s flight from Manila City, Boracay Island is home to what is widely regarded as the best tourist spot in the Philippines—White Beach. Stretching for 4 kilometers, White Beach boasts powdery, pure white sand that feels like walking on clouds, making it one of the finest beaches not only in the country but also in the world.</p>
+            <button class="plan-btn" aria-label="Plan trip selected destination" onclick="redirectToPlanner('Boracay')">Plan your trip</button>
+          </div>
+        </div>
+        <div class="destination" data-category="beach">
+          <div class="destination-card">
+            <img src="images/destinations/beaches/nacpan/nacpan2-small.webp" alt="Nacpan-small" loading="lazy">
+          </div>
+          <div class="slideshow-container" tabindex="0">
+            <div class="slides">
+              <img src="images/destinations/beaches/nacpan/nacpan1.webp" alt="Nacpan" loading="lazy">
+              <img src="images/destinations/beaches/nacpan/nacpan2.webp" alt="Nacpan" loading="lazy">
+              <img src="images/destinations/beaches/nacpan/nacpan3.webp" alt="Nacpan" loading="lazy">
+              <img src="images/destinations/beaches/nacpan/nacpan4.webp" alt="Nacpan" loading="lazy">
+              <img src="images/destinations/beaches/nacpan/nacpan5.webp" alt="Nacpan" loading="lazy">
+            </div>
+            <button class="prev" aria-label="Previous slide" onclick="changeSlide(-1)">&#10094;</button>
+              <button class="next" aria-label="Next slide" onclick="changeSlide(1)">&#10095;</button>
+            <div class="dot-container">
+              <span class="dot" data-index="0"></span>
+              <span class="dot" data-index="1"></span>
+              <span class="dot" data-index="2"></span>
+              <span class="dot" data-index="3"></span>
+              <span class="dot" data-index="4"></span>
+            </div>
+          </div>
+          <div class="description">
+            <h3>Nacpan</h3>
+            <p>Perfect for a relaxing beach day, Nacpan Beach invites you to unwind in one of the most picturesque settings in Palawan Island. Just steps away, you'll find Calitang Beach, and together they form the iconic Twin Beaches of El Nido town, a sight that’s as breathtaking from the shore as it is from above.</p>
+            <button class="plan-btn" aria-label="Plan trip selected destination" onclick="redirectToPlanner('Nacpan')">Plan your trip</button>
+          </div>
+        </div>
+        <div class="destination" data-category="beach">
+          <div class="destination-card">
+            <img src="images/destinations/beaches/siargao/siargao1-small.webp" alt="Siargao-small" loading="lazy">
+          </div>
+          <div class="slideshow-container" tabindex="0">
+            <div class="slides">
+              <img src="images/destinations/beaches/siargao/siargao1.webp" alt="Siargao" loading="lazy">
+              <img src="images/destinations/beaches/siargao/siargao2.webp" alt="Siargao" loading="lazy">
+              <img src="images/destinations/beaches/siargao/siargao3.webp" alt="Siargao" loading="lazy">
+              <img src="images/destinations/beaches/siargao/siargao4.webp" alt="Siargao" loading="lazy">
+              <img src="images/destinations/beaches/siargao/siargao5.webp" alt="Siargao" loading="lazy">
+            </div>
+            <button class="prev" aria-label="Previous slide" onclick="changeSlide(-1)">&#10094;</button>
+              <button class="next" aria-label="Next slide" onclick="changeSlide(1)">&#10095;</button>
+            <div class="dot-container">
+              <span class="dot" data-index="0"></span>
+              <span class="dot" data-index="1"></span>
+              <span class="dot" data-index="2"></span>
+              <span class="dot" data-index="3"></span>
+              <span class="dot" data-index="4"></span>
+            </div>
+        </div>
+        <div class="description">
+          <h3>Siargao</h3>
+          <p>Siargao Island, located in the island region of Mindanao, south of the Philippines, has rapidly become one of the country's top destinations, especially for surf enthusiasts. Known as the country’s surfing capital and even considered by some as the surfing mecca of Asia, Siargao has transformed from a quiet island into a hotspot for adventure seekers and young travelers.</p>
+          <button class="plan-btn" aria-label="Plan trip selected destination" onclick="redirectToPlanner('Siargao')">Plan your trip</button>
+        </div>
+        </div>
+        <div class="destination" data-category="beach">
+          <div class="destination-card">
+            <img src="images/destinations/beaches/tubbataha/tubbataha1-small.webp" alt="tubbataha-small" loading="lazy">
+          </div>
+          <div class="slideshow-container" tabindex="0">
+            <div class="slides">
+              <img src="images/destinations/beaches/tubbataha/tubbataha1.webp" alt="Tubbataha" loading="lazy">
+              <img src="images/destinations/beaches/tubbataha/tubbataha2.webp" alt="Tubbataha" loading="lazy">
+              <img src="images/destinations/beaches/tubbataha/tubbataha3.webp" alt="Tubbataha" loading="lazy">
+              <img src="images/destinations/beaches/tubbataha/tubbataha4.webp" alt="Tubbataha" loading="lazy">
+              <img src="images/destinations/beaches/tubbataha/tubbataha5.webp" alt="Tubbataha" loading="lazy">
+            </div>
+            <button class="prev" aria-label="Previous slide" onclick="changeSlide(-1)">&#10094;</button>
+              <button class="next" aria-label="Next slide" onclick="changeSlide(1)">&#10095;</button>
+            <div class="dot-container">
+              <span class="dot" data-index="0"></span>
+              <span class="dot" data-index="1"></span>
+              <span class="dot" data-index="2"></span>
+              <span class="dot" data-index="3"></span>
+              <span class="dot" data-index="4"></span>
+            </div> 
+          </div>
+          <div class="description">
+            <h3>Tubbataha</h3>
+            <p>Tubbataha Reef, one of the top diving spots in the Philippines and the world, is located in the heart of the Sulu Sea, off the coast of Palawan Island. This UNESCO World Heritage site is renowned as a center of marine biodiversity, attracting divers and marine conservationists alike.</p>
+            <button class="plan-btn" aria-label="Plan trip selected destination" onclick="redirectToPlanner('Tubbataha')">Plan your trip</button>
+          </div>
+        </div>
+        <div class="destination" data-category="city">
+          <div class="destination-card">
+            <img src="images/destinations/cities/intramuros/intramuros2-small.webp" alt="Intramuros-small" loading="lazy">
+          </div>
+          <div class="slideshow-container" tabindex="0">
+            <div class="slides">
+              <img src="images/destinations/cities/intramuros/intramuros1.webp" alt="Intramuros" loading="lazy">
+              <img src="images/destinations/cities/intramuros/intramuros2.webp" alt="Intramuros" loading="lazy">
+              <img src="images/destinations/cities/intramuros/intramuros3.webp" alt="Intramuros" loading="lazy">
+              <img src="images/destinations/cities/intramuros/intramuros4.webp" alt="Intramuros" loading="lazy">
+              <img src="images/destinations/cities/intramuros/intramuros5.webp" alt="Intramuros" loading="lazy">
+            </div>
+            <button class="prev" aria-label="Previous slide" onclick="changeSlide(-1)">&#10094;</button>
+              <button class="next" aria-label="Next slide" onclick="changeSlide(1)">&#10095;</button>
+            <div class="dot-container">
+              <span class="dot" data-index="0"></span>
+              <span class="dot" data-index="1"></span>
+              <span class="dot" data-index="2"></span>
+              <span class="dot" data-index="3"></span>
+              <span class="dot" data-index="4"></span>
+            </div>  
+          </div>
+          <div class="description">
+            <h3>Intramuros</h3>
+            <p>Step back in time and explore the storied streets of Intramuros, the iconic walled city and one of the Philippines' most treasured historical landmarks. This 64-hectare Spanish stronghold, built by conquistador Miguel Lopez de Legazpi, stood resilient for centuries until it was ravaged by World War II. Yet, its captivating ruins remain, offering visitors a glimpse into the grandeur of old Manila City.</p>
+            <button class="plan-btn" aria-label="Plan trip selected destination" onclick="redirectToPlanner('Intramuros')">Plan your trip</button>
+          </div>
+        </div>
+        <div class="destination" data-category="city">
+          <div class="destination-card">
+            <img src="images/destinations/cities/vigan/vigan4-small.webp" alt="Vigan-small" loading="lazy">
+          </div>
+          <div class="slideshow-container" tabindex="0">
+            <div class="slides">
+              <img src="images/destinations/cities/vigan/vigan1.webp" alt="Vigan" loading="lazy">
+              <img src="images/destinations/cities/vigan/vigan2.webp" alt="Vigan" loading="lazy">
+              <img src="images/destinations/cities/vigan/vigan3.webp" alt="Vigan" loading="lazy">
+              <img src="images/destinations/cities/vigan/vigan4.webp" alt="Vigan" loading="lazy">
+              <img src="images/destinations/cities/vigan/vigan5.webp" alt="Vigan" loading="lazy">
+            </div>
+            <button class="prev" aria-label="Previous slide" onclick="changeSlide(-1)">&#10094;</button>
+              <button class="next" aria-label="Next slide" onclick="changeSlide(1)">&#10095;</button>
+            <div class="dot-container">
+              <span class="dot" data-index="0"></span>
+              <span class="dot" data-index="1"></span>
+              <span class="dot" data-index="2"></span>
+              <span class="dot" data-index="3"></span>
+              <span class="dot" data-index="4"></span>
+            </div>  
+          </div>
+          <div class="description">
+            <h3>Vigan</h3>
+            <p>Located about 400 kilometers north of the country's capital, Manila City, the historic city of Vigan in the province of Ilocos Sur transports you to the 16th century with its old-world charm and beautifully preserved Spanish colonial architecture.As one of the UNESCO World Heritage Sites in the Philippines, Vigan City is a must-visit, with Calle Crisologo being one of the crown jewels of this historic town in Ilocos Sur province.</p>
+            <button class="plan-btn" aria-label="Plan trip selected destination" onclick="redirectToPlanner('Vigan')">Plan your trip</button>
+          </div>
+        </div>
+        <div class="destination" data-category="others">
+          <div class="destination-card">
+            <img src="images/destinations/others/kawasan/kawasan2-small.webp" alt="Kawasan-small" loading="lazy">
+          </div>
+          <div class="slideshow-container" tabindex="0">
+            <div class="slides">
+              <img src="images/destinations/others/kawasan/kawasan1.webp" alt="Kawasan" loading="lazy">
+              <img src="images/destinations/others/kawasan/kawasan2.webp" alt="Kawasan" loading="lazy">
+              <img src="images/destinations/others/kawasan/kawasan3.webp" alt="Kawasan" loading="lazy">
+              <img src="images/destinations/others/kawasan/kawasan4.webp" alt="Kawasan" loading="lazy">
+              <img src="images/destinations/others/kawasan/kawasan5.webp" alt="Kawasan" loading="lazy">
+            </div>
+            <button class="prev" aria-label="Previous slide" onclick="changeSlide(-1)">&#10094;</button>
+              <button class="next" aria-label="Next slide" onclick="changeSlide(1)">&#10095;</button>
+            <div class="dot-container">
+              <span class="dot" data-index="0"></span>
+              <span class="dot" data-index="1"></span>
+              <span class="dot" data-index="2"></span>
+              <span class="dot" data-index="3"></span>
+              <span class="dot" data-index="4"></span>
+            </div>  
+          </div>
+          <div class="description">
+            <h3>Kawasan</h3>
+            <p>Cebu Island is also a hub for adrenaline-pumping activities, and Kawasan Falls is the grand finale of the island’s famous canyoneering experience. This tour is packed with excitement as you swim through rivers, rappel down rugged rock faces, and leap from mini-waterfalls—culminating in a refreshing plunge into Kawasan Falls’ cool, crystal-clear waters.</p>
+            <button class="plan-btn" aria-label="Plan trip selected destination" onclick="redirectToPlanner('Kawasan')">Plan your trip</button>
+          </div>
+        </div>
+        <div class="destination" data-category="others">
+          <div class="destination-card">
+            <img src="images/destinations/others/kayangan/kayangan5-small.webp" alt="Kayangan-small" loading="lazy">
+          </div>
+          <div class="slideshow-container" tabindex="0">
+            <div class="slides">
+              <img src="images/destinations/others/kayangan/kayangan1.webp" alt="kayangan" loading="lazy">
+              <img src="images/destinations/others/kayangan/kayangan2.webp" alt="kayangan" loading="lazy">
+              <img src="images/destinations/others/kayangan/kayangan3.webp" alt="kayangan" loading="lazy">
+              <img src="images/destinations/others/kayangan/kayangan4.webp" alt="kayangan" loading="lazy">
+              <img src="images/destinations/others/kayangan/kayangan5.webp" alt="kayangan" loading="lazy">
+            </div>
+            <button class="prev" aria-label="Previous slide" onclick="changeSlide(-1)">&#10094;</button>
+              <button class="next" aria-label="Next slide" onclick="changeSlide(1)">&#10095;</button>
+            <div class="dot-container">
+              <span class="dot" data-index="0"></span>
+              <span class="dot" data-index="1"></span>
+              <span class="dot" data-index="2"></span>
+              <span class="dot" data-index="3"></span>
+              <span class="dot" data-index="4"></span>
+            </div>  
+          </div>
+          <div class="description">
+            <h3>Kayangan</h3>
+            <p>Located in the northern part of Palawan Island, the town of Coron is a coastal paradise in the Philippines known for its breathtaking natural beauty. Among its many gems, Kayangan Lake stands out as a must-visit destination. Often hailed as the cleanest lake in the Philippines and Asia, Kayangan Lake’s crystal-clear waters and surrounding limestone cliffs create a magical setting that you can visit by joining island hopping adventures.</p>
+            <button class="plan-btn" aria-label="Plan trip selected destination" onclick="redirectToPlanner('Kayangan')">Plan your trip</button>
+          </div>
+        </div>
+        <div class="destination" data-category="others">
+          <div class="destination-card">
+            <img src="images/destinations/others/underground/underground3-small.webp" alt="Underground-small" loading="lazy">
+          </div>
+          <div class="slideshow-container" tabindex="0">
+            <div class="slides">
+              <img src="images/destinations/others/underground/underground1.webp" alt="Underground River" loading="lazy">
+              <img src="images/destinations/others/underground/underground2.webp" alt="Underground River" loading="lazy">
+              <img src="images/destinations/others/underground/underground3.webp" alt="Underground River" loading="lazy">
+              <img src="images/destinations/others/underground/underground4.webp" alt="Underground River" loading="lazy">
+              <img src="images/destinations/others/underground/underground5.webp" alt="Underground River" loading="lazy">
+            </div>
+            <button class="prev" aria-label="Previous slide" onclick="changeSlide(-1)">&#10094;</button>
+              <button class="next" aria-label="Next slide" onclick="changeSlide(1)">&#10095;</button>
+            <div class="dot-container">
+              <span class="dot" data-index="0"></span>
+              <span class="dot" data-index="1"></span>
+              <span class="dot" data-index="2"></span>
+              <span class="dot" data-index="3"></span>
+              <span class="dot" data-index="4"></span>
+            </div>  
+          </div>
+          <div class="description">
+            <h3>Underground River</h3>
+            <p>Puerto Princesa City serves as the gateway to Palawan Island and is home to the world-renowned Puerto Princesa Underground River, a UNESCO World Heritage Site and one of the New 7 Wonders of the World. Spanning over 8 kilometers, it is the longest underground river in the world that can be explored, winding through a magnificent cave system adorned with impressive stalactites and stalagmites.</p>
+            <button class="plan-btn" aria-label="Plan trip selected destination" onclick="redirectToPlanner('Underground River')">Plan your trip</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p><span id="currentYear"></span> Dallin Cabaliza | Philippines</p>
+    <p id="lastModified"></p>
+  </footer>
 </body>
 </html>

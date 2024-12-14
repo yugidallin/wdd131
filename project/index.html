@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Title</title>
+    <meta name="description" content="description of page using keywords">
+    <meta name="author" content="Dallin Cabaliza">
+    <link rel="stylesheet" href="styles/travel.css">
+    <script src="scripts/travel.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <button id="menu" aria-label="Toggle navigation menu"></button>
+        <div class="logo">
+            <a href="index.html">
+                <h1>Travel-PH.com</h1>
+            </a>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="planner.html">Itinerary Planner</a>
+        </nav>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/el-nido-large.webp" media="(min-width: 1080px)">
+                <source srcset="images/el-nido.webp" media="(min-width: 720px)">
+                <img src="images/el-nido-small.webp" alt="El Nido Palawan" width="498" height="634">
+            </picture>
+            <div class="card">
+                <h2>Travel Today!</h2>
+                <div class="intro">
+                    <p>From pristine beaches to majestic mountains, vibrant cities to hidden gems—your dream getaway awaits! Explore breathtaking destinations, find the best deals, and plan your perfect stay with ease. Start your unforgettable Philippine adventure today!</p>
+                    <button id="destination-btn" aria-label="Go to destinations page" onclick="window.location.href='destinations.html'">Check Destinations</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p><span id="currentYear"></span> Dallin Cabaliza | Philippines</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

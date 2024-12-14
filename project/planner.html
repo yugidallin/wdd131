@@ -7,34 +7,71 @@
     <meta name="description" content="description of page using keywords">
     <meta name="author" content="Dallin Cabaliza">
     <link rel="stylesheet" href="styles/travel.css">
-    <script src="scripts/travel.js"></script>
+    <link rel="stylesheet" href="styles/planner.css">
+    <script src="scripts/travel.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Travel-PH.com</h1>
-        <nav>
-            <ul class="nav-links">
-              <li><a href="siteplan.html">Home</a></li>
-              <li><a href="destinations.html">Destinations</a></li>
-              <li><a href="planner.html">Itinerary Planner</a></li>
-            </ul>
-          </nav>
-    </header>
-    <nav>
+  <header>
+    <button id="menu" aria-label="Toggle navigation menu"></button>
+    <div class="logo">
+        <a href="index.html">
+            <h1>Travel-PH.com</h1>
+        </a>
+    </div>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="planner.html" class="active">Itinerary Planner</a>
     </nav>
-    <main>
-        <section id="planner">
-            <h2>Plan Your Itinerary</h2>
-            <form id="planner-form">
-              <label for="budget">Travel Budget ($):</label>
-              <input type="number" id="budget" required>
-              <label for="destination">Destination:</label>
-              <input type="text" id="destination" required>
-              <button type="submit">Save</button>
-            </form>
-            <p id="feedback"></p>
-          </section>
-    </main>
-    <footer>&copy Dallin Cabaliza | WDD131 - Fall Second Block 2024</footer>
+</header>
+  <main>      
+    <section id="planner">
+      <h2>Plan Your Trip</h2>
+  
+      <form id="itinerary-form">
+        <label for="destination">Choose a destination:</label>
+        <select id="destination" required>
+            <option value="" disabled selected>Select a destination</option>
+            <option value="Boracay">Boracay</option>
+            <option value="Nacpan">Nacpan</option>
+            <option value="Siargao">Siargao</option>
+            <option value="Tubbataha">Tubbataha</option>
+            <option value="Intramuros">Intramuros</option>
+            <option value="Vigan">Vigan</option>
+            <option value="Kawasan">Kawasan</option>
+            <option value="Kayangan">Kayangan</option>
+            <option value="Underground River">Underground River</option>
+        </select>
+
+        <label for="start-date">Start Date:</label>
+        <input type="date" id="start-date" required>
+
+        <label for="end-date">End Date:</label>
+        <input type="date" id="end-date" required>
+
+        <label for="budget">Estimated Budget ($):</label>
+        <input type="number" id="budget" readonly>
+
+        <button class="submit" type="submit">Submit</button>
+    </form>
+
+    <div id="confirmation-popup" class="popup">
+        <div class="popup-content">
+            <h3>Your Itinerary</h3>
+            <p id="popup-details"></p>
+            <button id="save-itinerary">Save Itinerary</button>
+            <button id="cancel">Cancel</button>
+        </div>
+    </div>
+    </section>
+  </main>
+  <footer>
+    <p><span id="currentYear"></span> Dallin Cabaliza | Philippines</p>
+    <p id="lastModified"></p>
+  </footer>
 </body>
 </html>
